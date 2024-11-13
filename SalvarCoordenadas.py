@@ -15,7 +15,7 @@ def get_relative_coordinates(hand_landmarks):
 
     # Lista para armazenar as coordenadas relativas
     relative_coords = []
-    letra = 1
+    letra = 1 #mudar aqui de acordo com qual lera tu for adicionar
     relative_coords.append(f"{letra:.0f}")
     # Iterar sobre todos os 21 pontos de mão
     for landmark in hand_landmarks.landmark:
@@ -37,7 +37,7 @@ def get_relative_coordinates(hand_landmarks):
 
 
 # Abrir o arquivo de texto para salvar as coordenadas
-with open("C:\\Users\\User\\PycharmProjects\\Libras\\.venv\\Letras\\Letra_A.txt", "a") as file:
+with open("C:\\Users\\User\\PycharmProjects\\Libras\\.venv\\Letras\\Letras.txt", "a") as file: #mudar aqui
     # Inicialização do MediaPipe Hands
     webcam = cv2.VideoCapture(0)
     with mp_hands.Hands(
