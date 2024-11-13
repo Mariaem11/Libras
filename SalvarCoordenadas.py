@@ -15,7 +15,8 @@ def get_relative_coordinates(hand_landmarks):
 
     # Lista para armazenar as coordenadas relativas
     relative_coords = []
-
+    letra = 1
+    relative_coords.append(f"{letra:.0f}")
     # Iterar sobre todos os 21 pontos de mão
     for landmark in hand_landmarks.landmark:
         # Coordenadas absolutas
@@ -29,6 +30,7 @@ def get_relative_coordinates(hand_landmarks):
         z_rel = z_abs - wrist.z if hasattr(landmark, 'z') else 0  # Para 3D, calcula a diferença de z também
 
         # Adiciona as coordenadas relativas à lista
+
         relative_coords.append(f"{x_rel:.4f},{y_rel:.4f},{z_rel:.4f}")
 
     return relative_coords
