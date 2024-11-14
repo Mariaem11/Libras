@@ -31,7 +31,7 @@ def get_relative_coordinates(hand_landmarks):
 
         # Adiciona as coordenadas relativas à lista
 
-        relative_coords.append(f"{x_rel:.4f},{y_rel:.4f},{z_rel:.4f}")
+        relative_coords.append(f"{x_rel:.7f},{y_rel:.7f},{z_rel:.7f}")
 
     return relative_coords
 
